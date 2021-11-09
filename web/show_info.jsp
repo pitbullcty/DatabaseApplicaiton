@@ -10,14 +10,15 @@
 <jsp:useBean id="team_info" class="java.util.ArrayList" scope="session"></jsp:useBean>
 <html>
 <head>
-    <title>Result</title>
+    <title>结果</title>
 </head>
 <body>
 <%if (team_info == null || team_info.isEmpty()) { %>
 对不起没有结果,请单击<a href="index.html">返回</a>
 <%} else { %>
 <p></p>
-<table style="align:center; border:1px">
+
+<table border="1" align="center">
     <caption>Title</caption>
     <tr>
         <td>学号</td>
@@ -41,6 +42,10 @@
         <%}%>
     </tr>
         <%}%>
+
+        <% if (team_info!=null || !team_info.isEmpty()) {%><a href="index.html">单击链接返回主界面</a>
+        <%}%>
+
 
 </body>
 </html>

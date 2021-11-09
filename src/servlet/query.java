@@ -19,7 +19,7 @@ public class query extends HttpServlet {
             team_info = getHobbies(key);
         }
         request.getSession().setAttribute("team_info", team_info);
-        response.sendRedirect("show_info.jsp");
+        response.sendRedirect("../show_info.jsp");
     }
 
     public ArrayList<Info> getHobbies(String key) {

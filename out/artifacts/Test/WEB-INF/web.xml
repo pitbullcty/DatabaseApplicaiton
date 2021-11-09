@@ -3,4 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>query</servlet-name>
+        <servlet-class>servlet.query</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>query</servlet-name>
+        <url-pattern>/servlet/query</url-pattern>
+    </servlet-mapping>
 </web-app>

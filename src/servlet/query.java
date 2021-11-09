@@ -3,15 +3,14 @@ package servlet;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-
 import bean.Info;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class query extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        request.setCharacterEncoding("utf-8");  //设置编码格式
         String key = request.getParameter("key");
         ArrayList<Info> team_info=null;
         if (key != null) {
@@ -41,7 +40,7 @@ public class query extends HttpServlet {
             while (rs.next()) {
                 Info temp = new Info();
                 temp.setHobby(rs.getString("hobby"));
-                temp.setBirthday(rs.getString("birthday"));
+                temp.setBirthday(String.valueOf(rs.getDate("birthday")));
                 temp.setName(rs.getString("name"));
                 temp.setNum(rs.getString("num"));
                 list.add(temp);  //结果加入list中

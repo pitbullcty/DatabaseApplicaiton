@@ -1,5 +1,5 @@
 DROP TABLE team_member;
-CREATE TABLE team_member ( num VARCHAR ( 15 ) PRIMARY KEY, NAME VARCHAR ( 5 ), brithday DATE, hobby VARCHAR ( 20 ) );
+CREATE TABLE team_member ( num VARCHAR ( 15 ) PRIMARY KEY, NAME VARCHAR ( 5 ), birthday DATE, hobby VARCHAR ( 20 ) );
 INSERT INTO team_member
 VALUES
     ( '2019141500091', '戴阳彬', '2001-11-16', '羽毛球' );
